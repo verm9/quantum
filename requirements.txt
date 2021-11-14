@@ -1,0 +1,5 @@
+websockets~=9.1
+aiohttp~=3.8
+clickhouse-driver~=0.2
+python-kucoin~=2.1
+python-binance~=1.0
