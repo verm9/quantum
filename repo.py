@@ -48,7 +48,7 @@ class ClickhousePriceRepo(BasePriceRepo):
         time_received DateTime64(3, 'Europe/London')
     )
     ENGINE = MergeTree
-    PRIMARY KEY (base, quote, time_received)
+    ORDER BY (time_received, base, quote)
 
     CREATE TABLE price_buffer AS price ENGINE = Buffer(db1, price, 16, 1, 10, 1000, 1000000, 10000, 100000000)
     """
